@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class LoginPage extends CommonMethods {
+
     //This is object repository
     @FindBy(id="txtUsername")
     public WebElement usernameBox;
@@ -17,7 +18,6 @@ public class LoginPage extends CommonMethods {
     public  WebElement loginBtn;
 
     public LoginPage(){
-
         PageFactory.initElements(driver,this);//initialize the elements
     }
 

@@ -13,10 +13,12 @@ import utils.Constants;
 import java.util.concurrent.TimeUnit;
 
 public class EmployeeSearchSteps extends CommonMethods {
+
     @Given("user is navigated to HRMS application")
     public void user_is_navigated_to_hrms_application() {
       openBrowserAndLaunchApplication();
     }
+
     @When("user enters valid admin credentials")
     public void user_enters_valid_admin_credentials() {
        // LoginPage login = new LoginPage();
@@ -37,6 +39,7 @@ public class EmployeeSearchSteps extends CommonMethods {
        // driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT,TimeUnit.SECONDS);
 
     }
+
     @When("user navigated to employee list page")
     public void user_navigated_to_employee_list_page() {
       // WebElement pimOption= driver.findElement(By.id("menu_pim_viewPimModule"));
@@ -49,6 +52,7 @@ public class EmployeeSearchSteps extends CommonMethods {
         //click(empListOption);
         click(employeeSearchPage.empListOption);
     }
+
     @When("user enters valid employee id")
     public void user_enters_valid_employee_id() {
      // WebElement searchId= driver.findElement(By.id("empsearch_id"));
@@ -56,17 +60,20 @@ public class EmployeeSearchSteps extends CommonMethods {
         //sendText(searchID,"8510142");
         sendText(employeeSearchPage.idField,"8510142");
     }
+
     @When("user clicks on search button")
     public void user_clicks_on_search_button() {
        //WebElement searchButton = driver.findElement(By.id("searchBtn"));
        //searchButton.click();
         click(employeeSearchPage.searchButton);
     }
+
     @Then("user is able to see employee information")
     public void user_is_able_to_see_employee_information() {
         System.out.println("Result displayed");
         //tearDown();
     }
+
     @When("user enters valid employee name")
     public void user_enters_valid_employee_name() {
        // driver.manage().timeouts().implicitlyWait(Constants.IMPLICIT_WAIT,TimeUnit.SECONDS);

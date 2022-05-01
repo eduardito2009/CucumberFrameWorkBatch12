@@ -1,5 +1,6 @@
 package steps;
 
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
@@ -12,6 +13,7 @@ import utils.Constants;
 import java.util.concurrent.TimeUnit;
 
 public class LoginSteps extends CommonMethods {
+
     @Then("admin user is successfully logged in")
     public void admin_user_is_successfully_logged_in() {
         System.out.println("test passed");
@@ -26,7 +28,7 @@ public class LoginSteps extends CommonMethods {
         sendText(login.usernameBox,"tts12345");
         //WebElement passwordField= driver.findElement(By.name("txtPassword"));
         sendText(login.passwordBox, "Hum@nhrm123");
-        // passwordField.sendKeys(ConfigReader.getPropertyValue("password"));
+
 
     }
 
@@ -50,8 +52,6 @@ public class LoginSteps extends CommonMethods {
     @Then("user see error message on the screen")
     public void user_see_error_message_on_the_screen() {
        //homework -verify error message for this
-       // getText(login.errorMessage);
-       // errorMessage(login.errorMessage);
         //tearDown();
     }
 }

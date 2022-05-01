@@ -1,5 +1,5 @@
 package utils;
-
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,8 +10,8 @@ public class ConfigReader {
     // this method will read any property file
     public static Properties readProperties(String filePath){
         try{
-            FileInputStream fis=new FileInputStream(filePath);
-            prop= new Properties();
+            FileInputStream fis = new FileInputStream(filePath);
+            prop = new Properties();
             prop.load(fis);
         }catch(FileNotFoundException e){
             e.printStackTrace();
