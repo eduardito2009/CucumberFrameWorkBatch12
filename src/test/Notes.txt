@@ -1,0 +1,126 @@
+Gherkin language
+
+ Scenario steps:
+ Given.- Pre condition start our test, what we need to reach our goal
+ When.-  actions we need to perform, we need to perform action all the operations we perform are under when
+ And .-  supporting tag
+ Then.-  expected results
+
+ recap.-
+ What is framework?
+ --> It is an organized structure of folders and packages which allows us to write clean and maintainable code
+
+--> Build management tool.
+    Maven
+
+    pom.xml is the main configuration file in maven project.
+
+    Main is to use to write the code for development
+    test it is used to write the code to test the application, we need to tools for this:
+    -->Java which is for technical/coding we used Java directory
+    -->resources is for non-technical/non code we use resources
+
+
+ Cucumber --> it supports BDD
+          --> we use gherkin language(plain english text) to write the scenarios
+          --> it works with junit
+ Scenario:it is a test case
+ Given: Define a pre-condition
+ When: Defines the test action that will be executed
+ And:Is used to add conditions (supporting tag)
+ Then: Results and defines the Outcome of previous steps
+
+ US 12345 - Employee search
+
+ Scenario- Search employee by id
+ Given user is navigated to HRMS Application
+ When user enters valid admin credentials
+ And user clicks on login button
+ And user navigates to employee list page
+ When user enters valid employee id
+ And clicks on search button
+ Then user is able to see employee information
+
+ Scenario - Search employee by name
+ Given user is navigated to HRMS Application
+  When user enters valid admin credentials
+  And user clicks on login button
+  And user navigates to employee list page
+  When user enters valid employee valid name
+  And clicks on search button
+  Then user is able to see employee information
+
+file where we write BDD scenarios is feature file
+this file has .feature extension
+-------------------------------------------------------------------------------------
+Class 3
+Recap.-
+  We use feature file to write our scenarios
+  -- search employee by id
+  -- search employee by name
+In feature file we write scenarios using Gherkin language
+--> Given, when, and , then ,scenario,feature
+
+after feature file, we need
+all the non-Java needs to be under resources as test data
+utils--> constants--> provide unique paths
+utils--> Common Methods--> helps implementation
+---------------------------------------------------------------------------------------
+Class 4
+
+Common methods class in our framework is used to write all the methods we will be using in the majority of
+scenarios( Code reusability)
+
+sendText method, click, etc.
+
+in constant class we provide implicit wait, explicit wait values and test data path
+Page object model(POM) it's a  design pattern
+According to page object model, we create page classes for all the screens available in the application
+
+
+examples of inheritance in our framework--> When we extend class meaning inheritance the features from the other
+class
+-------------------------------------------------------------------------------------------------------------
+Class 5
+
+Recap:
+Creating multiple steps classes for multiple feature files.
+
+Page Object model design pattern: with this we create separate classes in different screens
+
+  What is PageFactory concept?(this is a constructor) We can utilize all the elements from a class , is also
+  to initialize all the elements
+
+  In CommonMethods we are calling pageInitialiazers method, this method is going to call the objects of page
+  classes which will call the constructor and these constructors will initialize all the Webelements
+
+  Runner class will help us to run all our scripts or scenarios
+  In runner clas we are not going to write anything inside the class we will do it outside the class
+
+  Manual Testing --> Test cases
+  Smoke Testing is a quick Test, is checking the key functionality of the application in no time
+
+  Regression Testing
+
+  ----------------------------------------------------------------------------------------------------
+  Class 6
+  Runner class - we use this class to execute test cases in cucumber
+
+  Cucumber options:
+  --> features - path of feature file
+  --> glue - to provide the path of steps definitions
+  --> dryRun - it provides step definition to add in steps classes
+  --> monochrome - if it set to true, it cleans the console
+  --> tags- we use tags to execute scenarios in groups
+           -- here we use OR and AND to execute scenarios from 2 or more different tags together
+
+  Background:We take common steps from scenarios and put them in background
+
+  Hooks: Only use on steps package, and we use hooks to provide pre-condition and post condition to all the
+  scenarios
+
+
+
+
+
+
