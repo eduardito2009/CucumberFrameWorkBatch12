@@ -25,7 +25,11 @@ import org.junit.runner.RunWith;// Cucumber always need support from junit
         //scenario having the tag
         // use and if we need to execute scenarios from logical and keyword which will execute the scenarios
         //having both the tags in it
-        tags = "@datatable"
+        tags = "@sprint12",
+        //html report will  be generated under target folder
+        plugin = {"html:target/cucumber.html", "pretty", "json:target/cucumber.json",
+        "rerun:target/failed.txt"
+}
 
 
 )

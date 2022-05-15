@@ -16,7 +16,7 @@ public class EmployeeSearchSteps extends CommonMethods {
 
     @Given("user is navigated to HRMS application")
     public void user_is_navigated_to_hrms_application() {
-      openBrowserAndLaunchApplication();
+     openBrowserAndLauchApplication();
     }
 
     @When("user enters valid admin credentials")

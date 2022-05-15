@@ -111,13 +111,80 @@ Page Object model design pattern: with this we create separate classes in differ
   --> glue - to provide the path of steps definitions
   --> dryRun - it provides step definition to add in steps classes
   --> monochrome - if it set to true, it cleans the console
-  --> tags- we use tags to execute scenarios in groups
+  --> tags- we use tags to execute scenarios in different groups
            -- here we use OR and AND to execute scenarios from 2 or more different tags together
 
-  Background:We take common steps from scenarios and put them in background
+  Background:We take common steps from scenarios and put them in background, we can not use the same background
+  for different types of files
 
   Hooks: Only use on steps package, and we use hooks to provide pre-condition and post condition to all the
   scenarios
+
+
+  Background vs hooks:
+  background--> it is applicable to one feature file
+  hooks--> it is applicable to all the feature files
+  -----------------------------------------------------------------------------------------------------
+  Review class:
+
+  Cucumber is a tool which support BDD
+  Keywords we use in Gherkin:
+  -->Given we use to define precondition
+  -->When we use when the action happened
+  -->Then we use for expected results
+  -->and we use to give continuation steps to our scenario
+  -->but ,And To enumerate more, Given,When Then
+
+  background:common steps for precondition that we use in that particular feature file.
+  Feature--> with feature we can specify the functionality we are going to test
+  Scenario-->
+  Scenario Outline--> comes with Examples keywords
+
+  Data Driven Testing--> when we have one functionality we have to test with multiple sets of data
+  feature--> use gherkin and is give the path for features we like to execute
+  step definition--> use java and also
+  hooks: @Before to provide preconditions to all scenarios in the entire project
+         @after hook provide post-condition to all scenarios'
+  runner class--> uses i.o.junit together with cucumber options which are just settings
+  cucumber options like:
+  glue--> which is a path to our steps
+  Dry Run--> path for unimplemented steps
+  monochrome--> is make our console more readable, more clean code
+  tags--> identify our test cases
+
+
+  Step Definition:
+
+  Implementation code using Java and we are going to add verification.equals/assertion
+
+  Steps to build an actual framework:
+  1.- We create maven project very important file on Maven is pom.xml(project object model) we identified
+  our dependencies. like Cucumber(java, junit), selenium,unit,apache poi etc
+
+  Maven has 3 repositories:
+     -Central repository maven.com
+     -remote
+     -local
+     -------------------------------------------------------------------------------------------------
+     Class 7
+
+  Recap --> hooks to write pre-condition and post conditions of the project.
+  2 Types of hooks we have in Cucumber:
+  @before and @after
+  we always write hooks under steps package
+
+  Data driver testing part:
+  using examples table and scenario outline
+  using data table
+
+  Assertions:
+  2 types
+  Comparison and existence
+
+
+
+
+
 
 
 
